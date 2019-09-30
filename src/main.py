@@ -8,15 +8,13 @@ Instruções básicas de como fazer a implementação estão no arquivo algoritm
 '''
 
 if __name__ == "__main__":
-
     algoritimoDeOrdenacao = InsertionSort()
-    arquivoJson = '../grafos/10000vertices.json'
-    arquivoDeSaida = '../arvores_geradas/mst10000Vertices.txt'
+    arquivoJson = '../grafos/7vertices.json'
+    arquivoDeSaida = '../arvores_geradas/mst7Vertices.txt'
 
     grafo = Grafo()
     grafo.estabelecerAlgoritmoDeOrdencao(algoritimoDeOrdenacao)
     grafo.carregarGrafo(arquivoJson)
 
-    arvoreGeradoraMinima =  grafo.executarKruskal() 
+    arvoreGeradoraMinima = grafo.executarKruskal()
     SalvarArvoreGeradoraMinimaEmArquivo(arquivoDeSaida, arvoreGeradoraMinima)
-
